@@ -7,6 +7,7 @@ Ryusei Kagawa*1, Izuho Miyazaki*1, Ryo Kinoshita*1,
 Kazuyoshi Takeda*2,Kazuyuki Nakagome*2, Takshi Imai*2
 
 *1 Center for Disease Biology and Integrative Medicine, Graduate School of Medicine, The University of Tokyo
+
 *2National Center of Neurology and Psychiatry Hospital
 
 
