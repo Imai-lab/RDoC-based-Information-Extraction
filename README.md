@@ -27,7 +27,7 @@ This repository serves as the online appendix for the paper titled above. It pro
 
 ### "COG" Domain Instruction Template
 
-#### Context-Included Version
+#### 1. Context-Included Version
 
 ##### Japanese Instruction
 ```text
@@ -97,7 +97,7 @@ This repository serves as the online appendix for the paper titled above. It pro
 
 ***
 
-#### Context-Excluded Version
+#### 2. Context-Excluded Version
 ##### Japanese Instruction
 
 ```text
