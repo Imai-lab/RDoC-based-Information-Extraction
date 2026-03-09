@@ -3,7 +3,7 @@
 Appendix：
 Development and Evaluation of an RDoC-Based Information Extraction Method from Japanese Psychiatric Clinical Notes Using Large Language Models
 
-Ryusei Kagawa<sup>1</sup>, Izuho Miyazaki<sup>1</sup>, Ryo Kinoshita*1, 
+Ryusei Kagawa<sup>1</sup>, Izuho Miyazaki<sup>1</sup>, Ryo Kinoshita<sup>1</sup>, 
 Kazuyoshi Takeda<sup>2</sup>,Kazuyuki Nakagome<sup>2</sup>, Takshi Imai<sup>1</sup>
 
 1 Center for Disease Biology and Integrative Medicine, Graduate School of Medicine, The University of Tokyo
