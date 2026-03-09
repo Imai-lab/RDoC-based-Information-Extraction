@@ -1,25 +1,36 @@
 # RDoC-based-Information-Extraction
 
-Appendix：
-Development and Evaluation of an RDoC-Based Information Extraction Method from Japanese Psychiatric Clinical Notes Using Large Language Models
+## Appendix: Development and Evaluation of an RDoC-Based Information Extraction Method from Japanese Psychiatric Clinical Notes Using Large Language Models
 
-Ryusei Kagawa<sup>1</sup>, Izuho Miyazaki<sup>1</sup>, Ryo Kinoshita<sup>1</sup>, 
-Kazuyoshi Takeda<sup>2</sup>,Kazuyuki Nakagome<sup>2</sup>, Takshi Imai<sup>1</sup>
+**Authors:**
+Ryusei Kagawa¹, Izuho Miyazaki¹, Ryo Kinoshita¹, Kazuyoshi Takeda², Kazuyuki Nakagome², Takashi Imai¹
 
-1 Center for Disease Biology and Integrative Medicine, Graduate School of Medicine, The University of Tokyo
+¹ *Center for Disease Biology and Integrative Medicine, Graduate School of Medicine, The University of Tokyo*
 
-2 National Center of Neurology and Psychiatry Hospital
-***
-This repository contains the appendix material for the above paper.
-Only the instruction templates used in the study are provided.
-No clinical records are disclosed.
-The input examples shown below use dummy data and are not identical to the data used for training or evaluation.
-The content is provided solely to document the instruction design employed in the experiments.
+² *National Center of Neurology and Psychiatry Hospital*
 
-"COG" Domain Instruction Template
+---
 
-1. Context-Included Version
-  Japanese Instruction
+### Overview
+This repository serves as the online appendix for the paper titled above. It provides the specific instruction (prompt) templates developed for extracting RDoC-based information from Japanese clinical narratives using Large Language Models (LLMs).
+
+> [!NOTE]
+> **Scope of the Repository:**
+> While our broader research framework includes several information tags based on the Research Domain Criteria (RDoC), this repository specifically focuses on and provides materials related to the **Cognitive Systems (COG)** domain.
+
+### Privacy and Data Disclaimer
+* **No Clinical Records:** To protect patient privacy, no actual clinical records or identifiable patient data are disclosed in this repository.
+* **Synthetic Examples:** All input examples provided below consist of **synthetic (dummy) data**. These examples are illustrative and are not identical to the actual data used for the training or evaluation phases of the study.
+* **Purpose:** The content is provided solely to document the instruction design and prompt engineering employed in our experiments.
+
+---
+
+### "COG" Domain Instruction Template
+
+#### Context-Included Version
+
+##### Japanese Instruction
+```text
 
   以下は、タスクを説明する指示です。要求を適切に満たす応答を書きなさい。
   
@@ -49,8 +60,10 @@ The content is provided solely to document the instruction design employed in th
   --- ここまで ---
   ### 応答:
   1
+```
 
-English Instruction
+##### English Instruction
+```text
 
   The following is an instruction describing a task. Write a response that appropriately fulfills the request.
   
@@ -80,9 +93,14 @@ English Instruction
   Response:
   1
 
-2. Context-Excluded Version
-Japanese Instruction
+```
 
+***
+
+#### Context-Excluded Version
+##### Japanese Instruction
+
+```text
   以下は、タスクを説明する指示です。要求を適切に満たす応答を書きなさい。
   
   ### 指示:
@@ -100,9 +118,10 @@ Japanese Instruction
   
   ### 応答:
   1
+```
 
-
-English Instruction
+##### English Instruction
+```text
 
   The following is an instruction describing a task. Write a response that appropriately fulfills the request.
   
@@ -120,3 +139,4 @@ English Instruction
   
   ### Response:
   1
+```
