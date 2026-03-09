@@ -9,8 +9,7 @@ Kazuyoshi Takeda<sup>2</sup>,Kazuyuki Nakagome<sup>2</sup>, Takshi Imai<sup>1</s
 1 Center for Disease Biology and Integrative Medicine, Graduate School of Medicine, The University of Tokyo
 
 2 National Center of Neurology and Psychiatry Hospital
-
-
+***
 This repository contains the appendix material for the above paper.
 Only the instruction templates used in the study are provided.
 No clinical records are disclosed.
