@@ -3,8 +3,8 @@
 Appendix：
 Development and Evaluation of an RDoC-Based Information Extraction Method from Japanese Psychiatric Clinical Notes Using Large Language Models
 
-Ryusei Kagawa*1, Izuho Miyazaki*1, Ryo Kinoshita*1, 
-Kazuyoshi Takeda*2,Kazuyuki Nakagome*2, Takshi Imai*2
+Ryusei Kagawa<sup>1</sup>, Izuho Miyazaki<sup>1</sup>, Ryo Kinoshita*1, 
+Kazuyoshi Takeda<sup>2</sup>,Kazuyuki Nakagome<sup>2</sup>, Takshi Imai<sup>1</sup>
 
 1 Center for Disease Biology and Integrative Medicine, Graduate School of Medicine, The University of Tokyo
 
@@ -17,7 +17,7 @@ No clinical records are disclosed.
 The input examples shown below use dummy data and are not identical to the data used for training or evaluation.
 The content is provided solely to document the instruction design employed in the experiments.
 
-COG Domain Instruction Template
+"COG" Domain Instruction Template
 
 1. Context-Included Version
   Japanese Instruction
