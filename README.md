@@ -22,15 +22,12 @@ The repository is organized as follows:
 1. **Tag Definitions**  
    Detailed definitions of each RDoC-based functional domain, including constructs and subconstructs.
 
-2. **Prompt Format and Instruction Design**  
-   Description of the prompt structure used for span extraction and classification.
+2. **Prompt Format and Instruction Design for Tag Classification in Step 2**  
+   Description of the prompt structure used for classifying extracted spans into tag categories in Step 2 of the two-stage framework.
 
-3. **Full Prompt Example (Cognitive Systems)**  
-   A complete prompt example for the Cognitive Systems (COG) domain.
+3. **Prompt Format and Instruction Design for Span Extraction and Tag Classification in the Decoder-Only Model**  
+   Description of the prompt structure used for jointly extracting important spans and classifying their tag categories using the decoder-only model.
 
-> [!NOTE]
-> **Scope of the Repository:**  
-> While the overall framework includes multiple RDoC domains, this repository focuses on documenting the design and implementation details of the tagging schema and prompt construction, with representative examples centered on the **Cognitive Systems (COG)** domain.
 
 ---
 
