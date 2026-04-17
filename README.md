@@ -607,7 +607,6 @@ Each prompt follows the structure below.
 
 ##### Japanese Instruction
 ```text
-## Prompt
 
 ### 指示
 
@@ -658,3 +657,113 @@ Each prompt follows the structure below.
 ## 応答
 ```
 
+##### English Instruction
+```text
+
+### Instructions
+
+You are a psychiatrist tasked with determining what type of problem specific expressions in clinical notes represent.  
+From the clinical text (approximately 5 sentences) in the ## Input below, extract all expressions that correspond to RDoC tags.
+
+---
+
+### Target Tags (8 domains)
+
+- inj: Non-suicidal self-injurious behavior  
+- mtr: Motor initiation/inhibition, psychomotor symptoms, difficulty moving the body  
+- neg: Negative emotions such as fear, anxiety, agitation, anger, helplessness  
+- pos: Reward responsiveness, motivation, interest, addictive or impulsive behaviors  
+- cog: Cognitive functions such as attention, memory, perception, judgment, coherence of thought, planning  
+- soc: Interpersonal relationships, social communication, understanding of self and others  
+- slp: Sleep, arousal level, circadian rhythm disturbances  
+- sui: Suicidal ideation or behaviors with intent to die  
+
+---
+
+### Extraction Rules
+
+- Extract only contiguous text spans that actually appear in the input text (no paraphrasing).  
+- The extracted span must exactly match the original text (do not remove punctuation or particles).  
+- Extract the smallest unit that still preserves meaning.  
+- Assign one or more appropriate tags to each span (multiple tags allowed). Use comma separation if multiple.  
+- List the extracted spans in the order they appear in the text.  
+- Output one span per line.  
+- Do not include explanations (no empty lines or bullet symbols like "-" or "•").  
+
+---
+
+### Output Format
+
+original_span\tTag(s) (comma-separated if multiple)
+
+
+If no applicable spans are found, output NONE.
+
+
+## Input
+
+--- Clinical Text ---
+(Insert clinical note here)
+--- End ---
+
+
+## Response
+```
+
+### Single-label Models
+
+#### 1. Template Structure
+
+Each prompt follows the structure below.
+
+##### japanese Instruction
+
+```text
+以下は、タスクを説明する指示です。要求を適切に満たす応答を書きなさい。
+
+### 指示:
+あなたは精神科医で、カルテ文章の中の特定の表現が患者のどういう種類の問題を表しているか判断する立場にあります。
+以下の ## 入力のカルテ文章中から、”{TAG}” に該当する表現を抽出してください。
+
+ただし、”{TAG}” に該当する表現は以下の通りです。
+{TAG} | {日本語名} | {構成要素} | {具体例}
+
+カルテ文章中に ”cog” に該当する表現がある場合は、その表現をカルテ文章中からそのまま抜き出して出力してください。
+該当する表現が複数ある場合は、すべて出力してください。
+該当する表現がない場合は「なし」のみを出力してください。
+
+
+## 入力
+--- カルテ ---
+（本文）
+--- ここまで ---
+
+### 応答:
+```
+
+##### English Instruction
+
+```text
+The following is an instruction describing a task. Write a response that appropriately fulfills the request.
+
+
+### Instructions:
+You are a psychiatrist tasked with determining what type of problem specific expressions in clinical notes represent.  
+Extract expressions corresponding to "{TAG}" from the clinical text in the ## Input below.
+
+The expressions corresponding to "{TAG}" are defined as follows:  
+{TAG} | {Japanese name} | {components} | {examples}
+
+If there are expressions corresponding to "cog" in the clinical text, extract those expressions exactly as they appear in the text and output them.  
+If there are multiple applicable expressions, output all of them.  
+If there are no applicable expressions, output only "none".
+
+
+## Input
+--- Clinical Text ---
+(Main text)
+--- End ---
+
+
+### Response:
+```
