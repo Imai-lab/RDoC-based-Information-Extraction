@@ -359,9 +359,9 @@ Suicidal ideation and attempt refer to thoughts, intentions, or actions directed
 
 ---
 
-## 2. Prompt Format and Instruction Design
+## 2. Prompt Format and Instruction Design for Tag Classification in Step 2
 
-Description of the prompt structure used for span extraction and classification.
+Description of the prompt structure used for classifying extracted spans into tag categories in Step 2 of the two-stage framework.
 
 #### 1. Template Structure
 
@@ -595,3 +595,66 @@ A complete prompt example for the Cognitive Systems (COG) domain.
   ### Response:
   1
 ```
+## 3. Prompt Format and Instruction Design for Span Extraction and Tag Classification in the Decoder-Only Model
+
+ Description of the prompt structure used for jointly extracting important spans and classifying their tag categories using the decoder-only model.
+
+### Multi-label Models
+
+#### 1. Template Structure
+
+Each prompt follows the structure below.
+
+##### Japanese Instruction
+```text
+## Prompt
+
+### 指示
+
+あなたは精神科医で、カルテ文章の中の特定の表現が患者のどういう種類の問題を表しているか判断する立場にあります。  
+以下の ## 入力のカルテ文章（約5文）から、RDoCタグに該当する表現をすべて抽出してください。
+
+---
+
+### 対象タグ（8領域）
+
+- inj：死の意図のない自傷行為  
+- mtr：運動の開始・抑制・精神運動症状、身体が動きにくいなど  
+- neg：恐怖、不安、焦燥、怒り、無力感などの否定的情動  
+- pos：報酬反応性、意欲、興味関心、依存や衝動行動  
+- cog：注意、記憶、知覚、判断力、思考のまとまり、段取りなどの認知機能  
+- soc：対人関係、社会的コミュニケーション、自己・他者理解  
+- slp：睡眠や覚醒水準、概日リズムの問題  
+- sui：死を望む考えや自殺を意図した行為  
+
+---
+
+### 抽出ルール
+
+- 抽出するのは、入力テキスト中に実際に存在する連続した文字列のみとする（言い換え禁止）。  
+- 原文スパンは入力テキストと完全一致する文字列をそのまま出力すること（句読点や助詞を勝手に削らない）。  
+- できるだけ意味が成立する最小単位で抽出する。  
+- 各表現には該当するタグを1つ以上付与する（複数可）。複数ある場合はカンマ区切りで列挙する。  
+- 抽出結果は、テキスト中で先に出てくる順（出現順）に並べる。  
+- 出力は、1行に1表現とし、改行しながら列挙する。  
+- 説明文は出力しない（空行や箇条書き記号（・や-）も付けない）。  
+
+
+### 出力形式
+
+原文スパン\tタグ名（カンマ区切りで複数可）
+
+
+該当がない場合は NONE と出力する。
+
+
+## 入力
+
+--- カルテ ---
+（ここにカルテ本文を記載）
+--- ここまで ---
+
+
+## 応答
+```
+
