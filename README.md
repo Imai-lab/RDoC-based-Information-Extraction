@@ -22,8 +22,8 @@ The repository is organized as follows:
 1. **Tag Definitions**  
    Detailed definitions of each RDoC-based functional domain, including constructs and subconstructs.
 
-2. **Prompt Format and Instruction Design for Tag Classification in Step 2**  
-   Description of the prompt structure used for classifying extracted spans into tag categories in Step 2 of the two-stage framework.
+2. **Prompt Format and Instruction Design for Tag Classification in Step 2 of the two-step framework**  
+   Description of the prompt structure used for classifying extracted spans into tag categories in Step 2 of the two-step framework.
 
 3. **Prompt Format and Instruction Design for Span Extraction and Tag Classification in the Decoder-Only Model**  
    Description of the prompt structure used for jointly extracting important spans and classifying their tag categories using the decoder-only model.
@@ -767,3 +767,12 @@ If there are no applicable expressions, output only "none".
 
 ### Response:
 ```
+
+### 2. Tag Definition Representation
+
+The tag definitions used here are identical to those employed in **Step 2 of the two-step framework (tag classification stage)**.
+
+Each tag is represented in the prompt using the following format:
+
+```text
+{TAG} | {Domain} | {Components} | {Examples}
