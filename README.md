@@ -1,6 +1,7 @@
 # RDoC-based-Information-Extraction
 
-## Appendix: Development and Evaluation of an RDoC-Based Information Extraction Method from Japanese Psychiatric Clinical Notes Using Large Language Models
+## Appendix: Construction and Evaluation of a RDoC-Based Information Extraction　Framework for Japanese Psychiatric Clinical Notes using Large
+Language Model
 
 **Authors:**  
 Ryusei Kagawa¹, Izuho Miyazaki¹, Ryo Kinoshita¹, Kazuyoshi Takeda², Kazuyuki Nakagome², Takashi Imai¹  
