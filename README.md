@@ -34,7 +34,7 @@ The repository is organized as follows:
 ### Privacy and Data Disclaimer
 
 * **No Clinical Records:** To protect patient privacy, no actual clinical records or identifiable patient data are disclosed in this repository.  
-* **Synthetic Examples:** All examples provided are based on synthetic (dummy) data and are intended solely for illustrative purposes.  
+* **Synthetic Examples:** All examples provided are based on dummy data and are intended solely for illustrative purposes.  
 * **Purpose:** This repository is intended to document the methodology, instruction design, and prompt engineering strategies used in our study.
 
 ## 1.Tag Definitions
